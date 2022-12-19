@@ -1,0 +1,53 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+ 
+    <title>Neuro Haven</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="cus navbar-brand " href="/">Neuro Haven</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+          </ul>
+          <a class=" pad my-2  my-sm-0" type="submit" href = "/logout">logout </a>
+          <a class=" pad my-2  my-sm-0" type="submit" href = "#" >{{user}} </a>
+          
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <video width="580" height = "580" controls>
+              <source src = "{{videoPat}}">
+                {{videoPat}}
+            </video>
+          </div>
+          <div class="col">
+            <center>
+              <font align=center><br><br><br><br><br><br><br><br><br><p align=justify>
+            <h1> ACTION PREDICTED : {{action}} </h1>
+            <h1> CONFIDENCE : {{confidence}} </h1></p>
+          </font>
+            </center>
+          </div>
+        </div>
+
+
+
+
+    </body>
+    </html>
